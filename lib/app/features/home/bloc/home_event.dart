@@ -12,3 +12,17 @@ class HomeLoad extends HomeEvent {
   @override
   List<Object> get props => [];
 }
+
+class HomeLoadAdd extends HomeEvent {
+  const HomeLoadAdd({this.completer});
+  final Completer? completer;
+  @override
+  List<Object> get props => [];
+}
+
+class HomeLoadBack extends HomeEvent {
+  const HomeLoadBack({this.completer});
+  final Completer? completer;
+  @override
+  List<Object> get props => [];
+}
