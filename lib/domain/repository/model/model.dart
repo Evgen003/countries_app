@@ -1,1 +1,2 @@
-export 'article.dart';
+export 'country.dart';
+export 'details.dart';

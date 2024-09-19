@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:countries_app/app/app.dart';
 
 class ArticleCard extends StatelessWidget {
-  final Article article;
+  final Country article;
   const ArticleCard({
     super.key,
     required this.article,

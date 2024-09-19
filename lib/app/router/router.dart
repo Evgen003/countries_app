@@ -1,4 +1,3 @@
-import 'package:countries_app/app/features/details/details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:talker_flutter/talker_flutter.dart';

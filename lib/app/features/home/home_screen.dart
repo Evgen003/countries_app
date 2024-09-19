@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             }
             if (state is HomeLoadSuccess) {
-              List<Article> articles = state.articles;
+              List<Country> articles = state.articles;
               return SingleChildScrollView(
                 padding: const EdgeInsets.all(20),
                 child: Column(
@@ -55,6 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               setState(() {
                                 if (offset > 0) {
                                   offset -= 1;
+                                  state.page = offset;
                                 }
                               });
                             },
@@ -67,6 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             onPressed: () {
                               setState(() {
                                 offset += 1;
+                                state.page = offset;
                               });
                             },
                             child: const Text('next'))

@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
-part 'article.g.dart';
+part 'country.g.dart';
 
 @JsonSerializable()
-class Article {
-  Article({
+class Country {
+  Country({
     required this.code,
     required this.currencyCodes,
     required this.name,
@@ -16,8 +16,8 @@ class Article {
   final List<String> currencyCodes;
   final String wikiDataId;
 
-  factory Article.fromJson(Map<String, dynamic> json) =>
-      _$ArticleFromJson(json);
+  factory Country.fromJson(Map<String, dynamic> json) =>
+      _$CountryFromJson(json);
 
-  Map<String, dynamic> toJson() => _$ArticleToJson(this);
+  Map<String, dynamic> toJson() => _$CountryToJson(this);
 }

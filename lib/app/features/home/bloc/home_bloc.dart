@@ -16,7 +16,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       if (state is! HomeLoadSuccess) {
         emit(HomeLoadInProgress());
       }
-      final articles = await geoRepository.getCountries();
+
+      final articles = await geoRepository.getCountries(state.page);
       emit(HomeLoadSuccess(
         articles: articles,
       ));

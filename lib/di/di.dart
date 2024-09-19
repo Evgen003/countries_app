@@ -15,4 +15,6 @@ Future<void> setupLocator() async {
   getIt.registerSingleton<Talker>(talker);
   getIt.registerSingleton(GeoRepository(dio: getIt<Dio>()));
   getIt.registerSingleton(HomeBloc(getIt.get<GeoRepository>()));
+  getIt.registerSingleton(CountryDetailsRepository(dio: getIt<Dio>()));
+  getIt.registerSingleton(DetailsBloc(getIt.get<CountryDetailsRepository>()));
 }

@@ -1,2 +1,3 @@
 export 'model/model.dart';
-export 'geo/geo.dart';
+export 'countries/countries.dart';
+export 'country_details/country_details.dart';

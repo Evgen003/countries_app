@@ -3,24 +3,20 @@ import 'package:dio/dio.dart';
 import 'package:countries_app/data/data.dart';
 import 'package:countries_app/domain/domain.dart';
 
-class GeoRepository extends GeoRepositoryInterface {
-  GeoRepository({required this.dio});
+class CountryDetailsRepository extends CountryDetailsRepositoryInterface {
+  CountryDetailsRepository({required this.dio});
   final Dio dio;
   @override
-  Future<List<Article>> getCountries() async {
+  Future<Details> getCountryDetails() async {
     try {
       final Response response = await dio.get(
-        Endpoints.countries,
+        Endpoints.countryDetails,
         queryParameters: {
           'languageCode': 'ru',
-          'limit': '10',
-          'offset': '0',
         },
       );
-      final news = (response.data['data'] as List)
-          .map((e) => Article.fromJson(e))
-          .toList();
-      return news;
+      final details = Details.fromJson(response.data['data']);
+      return details;
     } on DioException catch (e) {
       throw e.message.toString();
     }
