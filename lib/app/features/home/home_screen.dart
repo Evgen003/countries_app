@@ -57,6 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   offset -= 1;
                                 }
                               });
+                              _homeBloc.add(const HomeLoadBack());
                             },
                             child: const Text('prev')),
                         Text(
@@ -68,6 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               setState(() {
                                 offset += 1;
                               });
+                              _homeBloc.add(const HomeLoadAdd());
                             },
                             child: const Text('next'))
                       ],
