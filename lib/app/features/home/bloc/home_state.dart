@@ -1,8 +1,8 @@
 part of "home_bloc.dart";
 
 sealed class HomeState extends Equatable {
-  int page;
-  HomeState({this.page = 0});
+  final int page;
+  const HomeState({this.page = 0});
   @override
   List<Object> get props => [];
 }
@@ -12,7 +12,7 @@ final class HomeInitial extends HomeState {}
 final class HomeLoadInProgress extends HomeState {}
 
 final class HomeLoadSuccess extends HomeState {
-  HomeLoadSuccess({
+  const HomeLoadSuccess({
     required this.articles,
   });
   final List<Country> articles;
@@ -21,7 +21,7 @@ final class HomeLoadSuccess extends HomeState {
 }
 
 final class HomeLoadFailure extends HomeState {
-  HomeLoadFailure({
+  const HomeLoadFailure({
     required this.exception,
   });
   final Object? exception;

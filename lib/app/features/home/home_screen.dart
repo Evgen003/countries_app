@@ -55,7 +55,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               setState(() {
                                 if (offset > 0) {
                                   offset -= 1;
-                                  state.page = offset;
                                 }
                               });
                             },
@@ -68,7 +67,6 @@ class _HomeScreenState extends State<HomeScreen> {
                             onPressed: () {
                               setState(() {
                                 offset += 1;
-                                state.page = offset;
                               });
                             },
                             child: const Text('next'))
