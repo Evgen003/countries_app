@@ -7,6 +7,7 @@ import 'package:countries_app/di/di.dart';
 final GlobalKey<NavigatorState> _rootNavigationKey = GlobalKey<NavigatorState>(
   debugLabel: 'root',
 );
+int a = 0;
 final GoRouter router = GoRouter(
   debugLogDiagnostics: true,
   observers: [TalkerRouteObserver(talker)],
